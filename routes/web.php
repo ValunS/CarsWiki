@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\MarkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +14,10 @@ use App\Http\Controllers\CarController;
 |
 */
 
-Route::get('/', [CarController::class, "index"])->name("cars.index");
-Route::get('/create', [CarController::class, "create"])->name("cars.create");
+Route::get('/cars', [CarController::class, "index"])->name("cars.index");
+Route::get('/cars/create', [CarController::class, "create"])->name("cars.create");
+Route::post('/cars', [CarController::class, "store"])->name("cars.store");
+
+Route::get('/marks', [MarkController::class, "index"])->name("marks.index");
+Route::get('/marks/{mark_name}', [MarkController::class, "show"])->name("marks.show");
+// Route::post('/marks/create', [CarController::class, "store"])->name("marks.create");

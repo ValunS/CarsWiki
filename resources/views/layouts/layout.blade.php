@@ -7,14 +7,14 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-green-100 text-center">
+<body class="bg-green-100 text-center flex flex-col min-h-screen">
 
     <div class="mx-auto container px-2 w-full bg-green-100 text-center mb-10">
         <div class="w-full mx-auto">
             <div class="w-full mx-auto mb-18 text-center">
                 <h1 class="font-heading text-7xl font-bold text-gray-900 mb-8">
                     <span data-config-id="auto-txt-1-1">Cars</span>
-                    <span class="font-serif italic" data-config-id="auto-txt-2-1">Shop</span>
+                    <span class="font-serif italic" data-config-id="auto-txt-2-1">Wiki</span>
                 </h1>
                 <p class="text-lg text-gray-500" data-config-id="auto-txt-3-1">
                     Мы представляем машины различных производителей с поиском по различным фильтрам
@@ -25,34 +25,34 @@
 
     <div class="w-full bg-blue-100 py-4">
 
-        <ul class="grid grid-flow-col text-center text-gray-500">
+        <ul class="grid grid-flow-col text-center text-gray-500 mb-8">
             <li>
-                <a href="#page1"
-                    class="transition delay-150 duration-200 ease-in-out flex justify-center border-y-4 py-4 @yield('tab_car_choosen') hover:text-indigo-600 hover:border-indigo-600">
-                    Все машины
+                <a href="{{ route("cars.index") }}"
+                    class="transition delay-50 duration-600 ease-in-out flex justify-center border-y-4 py-4 @yield('tab_cars_choosen') hover:text-indigo-600 hover:border-indigo-600">
+                    Машины
                 </a>
             </li>
             <li>
-                <a href="#page2"
-                    class="transition delay-150 duration-200 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
+                <a href="{{ route("marks.index") }}"
+                    class="transition delay-50 duration-600 ease-in-out flex justify-center border-y-4 py-4 @yield('tab_marks_choosen') hover:text-indigo-600 hover:border-indigo-600">
                     Марки 
                 </a>
             </li>
             <li>
-                <a href="#page3"
-                    class="transition delay-150 duration-200 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
+                <a href="{{ route("cars.create") }}"
+                    class="transition delay-50 duration-600 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
                     Смена карточки
                 </a>
             </li>
             <li>
-                <a href="#page4"
-                    class="transition delay-150 duration-200 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
+                <a href="{{ route("cars.create") }}"
+                    class="transition delay-50 duration-600 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
                     Категории
                 </a>
             </li>
             <li>
-                <a href="#page5"
-                    class="transition delay-150 duration-200 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
+                <a href="{{ route("cars.create") }}"
+                    class="transition delay-50 duration-600 ease-in-out flex justify-center border-y-4 py-4 @yield('tab__choosen') hover:text-indigo-600 hover:border-indigo-600">
                     Детали
                 </a>
             </li>
@@ -62,7 +62,7 @@
     </div>
 
     <hr>
-    <footer class="bg-yellow-100 dark:bg-gray-900">
+    <footer class="bg-yellow-100 dark:bg-gray-900 mt-auto">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
